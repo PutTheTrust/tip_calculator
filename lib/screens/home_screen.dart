@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tip_calculator/widgets/title_widget.dart';
+import 'package:tip_calculator/widgets/total_widget.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -7,18 +8,21 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        children: [
-          // Title
-          TitleWidget()
-          // Amount container
+      backgroundColor: Color(0xFFF5F3F4),
+      body: SafeArea(
+        child: Column(
+          children: [
+            // Title
+            TitleWidget(),
+            // Amount container
+            TotalWidget()
+            // Bill input
 
-          // Bill input
+            // Percentage input
 
-          // Percentage input
-
-          // Split input
-        ],
+            // Split input
+          ],
+        ),
       ),
     );
   }
