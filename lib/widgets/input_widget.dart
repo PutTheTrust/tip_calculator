@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tip_calculator/constants/strings.dart';
+import 'package:tip_calculator/widgets/custom_space.dart';
 import 'package:tip_calculator/widgets/left_title_widget.dart';
 
 class InputWidget extends StatelessWidget {
@@ -16,9 +17,7 @@ class InputWidget extends StatelessWidget {
             topText: Strings.enter,
             bottomText: Strings.yourBill,
           ),
-          const SizedBox(
-            width: 34,
-          ),
+          const CustomSpacer(),
           Expanded(
             child: TextField(
               decoration: InputDecoration(

@@ -15,4 +15,8 @@ class Strings {
 
   static String split = "Split";
   static String theTotal = "the total";
+
+  static String tenPercent = "10";
+  static String fifteenPercent = "15";
+  static String twentyPercent = "20";
 }
