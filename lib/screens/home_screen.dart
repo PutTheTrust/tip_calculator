@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tip_calculator/constants/strings.dart';
+import 'package:provider/provider.dart';
+import 'package:tip_calculator/models/tip_model.dart';
 import 'package:tip_calculator/widgets/input_widget.dart';
-import 'package:tip_calculator/widgets/left_title_widget.dart';
 import 'package:tip_calculator/widgets/split_widget.dart';
 import 'package:tip_calculator/widgets/tip_widget.dart';
 import 'package:tip_calculator/widgets/title_widget.dart';
@@ -12,24 +12,28 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xFFF5F3F4),
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(24),
-          child: Column(
-            children: [
-              // Title
-              TitleWidget(),
-              // Amount container
-              TotalWidget(),
-              // Bill input
-              InputWidget(),
-              // Percentage input
-              TipWidget(),
-              // Split input
-              SplitWidget()
-            ],
+    return Consumer<TipModel>(
+      builder: (context, value, child) => Scaffold(
+        backgroundColor: Color(0xFFF5F3F4),
+        body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(24),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  // Title
+                  TitleWidget(),
+                  // Amount container
+                  TotalWidget(bill: value.total),
+                  // Bill input
+                  InputWidget(),
+                  // Percentage input
+                  TipWidget(),
+                  // Split input
+                  SplitWidget()
+                ],
+              ),
+            ),
           ),
         ),
       ),
