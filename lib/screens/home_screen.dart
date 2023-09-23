@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tip_calculator/constants/strings.dart';
+import 'package:tip_calculator/widgets/input_widget.dart';
+import 'package:tip_calculator/widgets/left_title_widget.dart';
 import 'package:tip_calculator/widgets/title_widget.dart';
 import 'package:tip_calculator/widgets/total_widget.dart';
 
@@ -10,18 +13,21 @@ class Home extends StatelessWidget {
     return const Scaffold(
       backgroundColor: Color(0xFFF5F3F4),
       body: SafeArea(
-        child: Column(
-          children: [
-            // Title
-            TitleWidget(),
-            // Amount container
-            TotalWidget()
-            // Bill input
+        child: Padding(
+          padding: EdgeInsets.all(24),
+          child: Column(
+            children: [
+              // Title
+              TitleWidget(),
+              // Amount container
+              TotalWidget(),
+              // Bill input
+              InputWidget()
+              // Percentage input
 
-            // Percentage input
-
-            // Split input
-          ],
+              // Split input
+            ],
+          ),
         ),
       ),
     );

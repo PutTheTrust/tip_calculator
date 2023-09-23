@@ -9,7 +9,7 @@ class TotalWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(24.0),
+      margin: const EdgeInsets.only(top: 24.0),
       width: MediaQuery.of(context).size.width,
       height: 200,
       decoration: const BoxDecoration(

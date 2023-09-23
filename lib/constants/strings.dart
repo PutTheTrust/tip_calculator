@@ -6,4 +6,13 @@ class Strings {
   static String mainTotal = "Total p/person";
   static String totalBill = "Total bill";
   static String totalTip = "Total tip";
+
+  static String enter = "Enter";
+  static String yourBill = "your bill";
+
+  static String choose = "Choose";
+  static String yourTip = "your tip";
+
+  static String split = "Split";
+  static String theTotal = "the total";
 }
