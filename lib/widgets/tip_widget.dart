@@ -21,12 +21,15 @@ class TipWidget extends StatelessWidget {
               children: [
                 CustomButton(
                   text: Strings.tenPercent,
+                  isShowSub: true,
                 ),
                 CustomButton(
                   text: Strings.fifteenPercent,
+                  isShowSub: true,
                 ),
                 CustomButton(
                   text: Strings.twentyPercent,
+                  isShowSub: true,
                 ),
               ],
             ),

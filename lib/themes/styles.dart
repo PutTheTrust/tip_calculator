@@ -6,7 +6,7 @@ class Styles {
   static TextStyle subTitle = const TextStyle(fontWeight: FontWeight.w500);
   static TextStyle subAmount = const TextStyle(
     fontSize: 12,
-    color: Colors.cyan,
+    color: Color(0xFF01C9BE),
     fontWeight: FontWeight.w900,
   );
   static TextStyle mainAmountSub = const TextStyle(
@@ -15,7 +15,7 @@ class Styles {
       const TextStyle(color: Colors.black, fontSize: 38);
 
   static ButtonStyle button = ButtonStyle(
-    backgroundColor: MaterialStateProperty.all<Color>(Colors.cyan),
+    backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF01C9BE)),
     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
       RoundedRectangleBorder(

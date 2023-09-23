@@ -1,9 +1,12 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:tip_calculator/themes/styles.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
-  const CustomButton({super.key, required this.text});
+  final bool isShowSub;
+  const CustomButton({super.key, required this.text, required this.isShowSub});
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +23,10 @@ class CustomButton extends StatelessWidget {
                 style:
                     const TextStyle(fontWeight: FontWeight.w900, fontSize: 24),
               ),
-              const TextSpan(
-                  text: "%", style: TextStyle(fontWeight: FontWeight.bold))
+              TextSpan(
+                text: isShowSub ? "%" : "",
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              )
             ],
           ),
         ),
