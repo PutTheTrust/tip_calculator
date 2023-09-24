@@ -24,13 +24,16 @@ class Home extends StatelessWidget {
                   // Title
                   TitleWidget(),
                   // Amount container
-                  TotalWidget(bill: value.total),
+                  TotalWidget(
+                      bill: value.total,
+                      tip: value.tip,
+                      totalPP: value.perPerson),
                   // Bill input
                   InputWidget(),
                   // Percentage input
                   TipWidget(),
                   // Split input
-                  SplitWidget()
+                  SplitWidget(split: value.split)
                 ],
               ),
             ),

@@ -5,7 +5,13 @@ import 'package:tip_calculator/widgets/amount_widget.dart';
 
 class TotalWidget extends StatelessWidget {
   final double bill;
-  const TotalWidget({super.key, required this.bill});
+  final double tip;
+  final double totalPP;
+  const TotalWidget(
+      {super.key,
+      required this.bill,
+      required this.tip,
+      required this.totalPP});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +29,7 @@ class TotalWidget extends StatelessWidget {
           children: [
             AmountWidget(
               text: Strings.mainTotal,
-              amount: bill.toString(),
+              amount: totalPP.toString(),
               textStyle: Styles.mainAmount,
               baseStyle: Styles.mainAmountSub,
               titleStyle: Styles.mainAmountTitle,
@@ -34,14 +40,14 @@ class TotalWidget extends StatelessWidget {
               children: [
                 AmountWidget(
                   text: Strings.totalBill,
-                  amount: "000",
+                  amount: bill.toString(),
                   textStyle: const TextStyle(color: Colors.cyan, fontSize: 24),
                   baseStyle: Styles.subAmount,
                   titleStyle: Styles.subTitle,
                 ),
                 AmountWidget(
                   text: Strings.totalTip,
-                  amount: "000",
+                  amount: totalPP.toString(),
                   textStyle: const TextStyle(color: Colors.cyan, fontSize: 24),
                   baseStyle: Styles.subAmount,
                   titleStyle: Styles.subTitle,
